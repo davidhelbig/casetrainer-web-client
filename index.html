@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polish Case Trainer</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <div class="text-wrapper">
+        <h1>Polish Case Trainer</h1>
+    <h2>🥟 What is this? 🥟</h2>
+    <p>This is a tool that helps Polish language learners with mastering declension.
+    <ul>
+        <li>Select which grammatical numbers and cases you would like to study.</li>
+        <li>You will then see pairs of <em>random</em> Polish nouns and adjectives.</li>
+        <li>Your goal is to decline the noun-adjective pair to the indicated number & case.</li> 
+        <li>Type your answer (noun & adjective separated by whitespace) in the text field.</li>
+    </ul>
+    </div>
+    <div id="middle-section">
+        <div id="case-selection-area">
+            <em>Which numbers and cases would you like to learn?</em>
+            <form id="selection-form">
+                <fieldset>
+                    <legend>Numbers</legend>
+                    <input type="checkbox" id="numbers-singular" name="numbers" value="singular" checked>
+                    <label for="numbers-singular">Singular</label><br>
+                    <input type="checkbox" id="numbers-plural" name="numbers" value="plural" checked>
+                    <label for="numbers-plural">Plural</label><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Cases</legend>
+                    <input type="checkbox" id="cases-nominative" name="cases" value="nominative" checked>
+                    <label for="cases-nominative">Nominative</label><br>
+                    <input type="checkbox" id="cases-genitive" name="cases" value="genitive" checked>
+                    <label for="cases-genitive">Genitive</label><br>
+                    <input type="checkbox" id="cases-dative" name="cases" value="dative" checked>
+                    <label for="cases-dative">Dative</label><br>
+                    <input type="checkbox" id="cases-accusative" name="cases" value="accusative" checked>
+                    <label for="cases-accusative">Accusative</label><br>
+                    <input type="checkbox" id="cases-instrumental" name="cases" value="instrumental" checked>
+                    <label for="cases-instrumental">Instrumental</label><br>
+                    <input type="checkbox" id="cases-locative" name="cases" value="locative" checked>
+                    <label for="cases-locative">Locative</label><br>
+
+                </fieldset>
+                <button type="submit" id="confirm-selection-button">Start</button>
+            </form>
+        </div>
+        <div id="trainer-area" class="invisible">
+            <div id="wrapper">
+                <div id="score" class="merged-grid"></div>
+                <div class="box">
+                    <div class="description">Noun</div>
+                    <div id="noun-base-value" class="value-holder"></div>
+                    <div id="noun-gender" class="value-holder"></div>
+                </div>
+                <div class="box">
+                    <div class="description">Adjective</div>
+                    <div id="adj-base-value" class="value-holder"></div>
+                </div>
+                <div class="box">
+                    <div class="description">Number</div>
+                    <div id="target-number" class="value-holder"></div>
+                </div>
+                <div class="box">
+                    <div class="description">Case</div>
+                    <div id="target-case" class="value-holder"></div>
+                </div>
+
+                <div class="merged-grid">
+                    <form id="input-form">
+                        <input type="text" id="answer-input"><br>
+                        <button type="submit" id="confirm-answer-button">Check</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="status-section">Hit "Start" to start learning!</div>
+
+    <script src="assets/js/quiz.js" type="module"></script>
+    
+</body>
+</html>

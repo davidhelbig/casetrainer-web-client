@@ -3,12 +3,13 @@ body {
     font-size: 15px;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
 }
 
-h2 {
+nav {
     text-align: center;
+    margin-top: 20px;
 }
 
 #middle-section {
